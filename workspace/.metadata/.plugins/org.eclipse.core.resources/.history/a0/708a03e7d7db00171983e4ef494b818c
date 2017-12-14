@@ -1,0 +1,17 @@
+package com.internousdev.webproj4.util;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DBConnector {
+	//JDBCドライバー名
+	private static String driverName = "com.mysql.jdbc.Driver";
+	//データベース接続URL
+	private static String url = "jdbc:mysql://localhost/testdeb4";
+	//データベース接続ユーザー名
+	private static String user = "root";
+	//データベース接続パスワード
+	private static String password = "mysql";
+
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
+<fullyQualifiedTypeName name="com.internousdev.template.util.DBConnector"/>
+<fullyQualifiedTypeName name="com.internousdev.template.util.DateUtil"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="com.internousdev.webproj3.util.DBConnector"/>
+<fullyQualifiedTypeName name="com.internousdev.webproj4.dto.HelloStrutsDTO"/>
+<fullyQualifiedTypeName name="com.internousdev.webproj4.util.DBConnector"/>
+<fullyQualifiedTypeName name="com.internousdev.webproj4.dto.LoginDTO"/>
+<fullyQualifiedTypeName name="com.internousdev.webproj4.dao.LoginDAO"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="com.internousdev.webproj4.dto.InquiryDTO"/>
+<fullyQualifiedTypeName name="com.opensymphony.xwork2.Action"/>
+<fullyQualifiedTypeName name="java.sql.ResultSet"/>
+<fullyQualifiedTypeName name="com.internousdev.webproj5.dao.HelloStrutsDAO"/>
+<fullyQualifiedTypeName name="com.internousdev.webproj5.dto.HelloStrutsDTO"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="org.apache.struts2.interceptor.SessionAware"/>
+</qualifiedTypeNameHistroy>
