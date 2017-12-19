@@ -50,6 +50,8 @@ public class LoginDAO {
 		return loginDTO;
 	}
 
+	
+	//これはいらない↓
 	public LoginDTO getLoginDTO() {
 		return loginDTO;
 	}
