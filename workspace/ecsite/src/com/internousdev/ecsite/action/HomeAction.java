@@ -38,11 +38,4 @@ public class HomeAction extends ActionSupport implements SessionAware {
 		this.session = session;
 	}
 
-	public void setsession(Map<String, Object> session) {
-		this.session = session;
-	}
-
-	public Map<String, Object> getsession() {
-		return this.session;
-	}
 }

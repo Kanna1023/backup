@@ -70,7 +70,7 @@
 		</div>
 		<div>
 			<s:if test="errorMassage != ''">
-				<s:property value="errorMassage" escape="false" />
+				<s:property value="errorMassage" escape="fakse"/>
 			</s:if>
 			<table>
 			<s:form action="UserCreateConfirmAction">

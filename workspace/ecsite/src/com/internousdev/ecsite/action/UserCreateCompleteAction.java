@@ -9,36 +9,28 @@ import com.internousdev.ecsite.dao.UserCreateCompleteDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class UserCreateCompleteAction extends ActionSupport implements SessionAware{
-
 	private String loginUserId;
-
 	private String loginPassword;
-
 	private String userName;
+	public Map<String,Object>session;
+	private String result;
+	
+	private UserCreateCompleteDAO  dao = new UserCreateCompleteDAO();
+	
+	public String execute() throws SQLException{
 
-	public Map<String,Object> session;
-
-	private UserCreateCompleteDAO userCreateCompleteDAO = new UserCreateCompleteDAO();
-
-	public String execute() throws SQLException {
-
-		userCreateCompleteDAO.cerateUser(session.get("loginUserId").toString(),
-				session.get("loginPassword").toString(),
-				session.get("userName").toString());
-
-		String result = SUCCESS;
-
-		return result ;
+		dao.createUser(session.get("loginUserId").toString(),session.get("loginPassword").toString(),session.get("userName").toString());
+		result = SUCCESS;
+		return result;
 	}
-
-	public String getLoginUserId() {
+	
+	public String getLoginUserId(){
 		return loginUserId;
 	}
-
-	public void setLoginUserId(String loginUserId) {
+	
+	public void setLoginUserId(String loginUserId){
 		this.loginUserId = loginUserId;
 	}
-
 	public String getLoginPassword() {
 		return loginPassword;
 	}
@@ -55,8 +47,11 @@ public class UserCreateCompleteAction extends ActionSupport implements SessionAw
 		this.userName = userName;
 	}
 
-	@Override
-	public void setSession(Map<String, Object> session) {
+	//オーバーライド
+	public void setSession(Map<String,Object>session){
 		this.session = session;
+
 	}
 }
+	
+	

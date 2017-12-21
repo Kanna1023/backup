@@ -13,7 +13,7 @@ public class BuyItemDAO {
 
 	private Connection connection = dbConnector.getConnection();
 
-	private BuyItemDTO buyItemDTO = new BuyItemDTO();
+	private BuyItemDTO DTO = new BuyItemDTO();
 
 	/**
 	 * 商品情報取得メソッド
@@ -29,19 +29,20 @@ public class BuyItemDAO {
 			ResultSet resultSet = preparedStatement.executeQuery();
 
 			if(resultSet.next()) {
-				buyItemDTO.setId(resultSet.getInt("id"));
-				buyItemDTO.setItemName(resultSet.getString("item_name"));
-				buyItemDTO.setItemPrice(resultSet.getString("item_price"));
+				DTO.setId(resultSet.getInt("id"));
+				DTO.setItemName(resultSet.getString("item_name"));
+				DTO.setItemPrice(resultSet.getString("item_price"));
 			}
 
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 
-		return buyItemDTO;
+		return DTO;
 	}
 
-	public BuyItemDTO getBuyItemDTO() {
-		return buyItemDTO;
-	}
+	//多分これいらない↓
+//	public BuyItemDTO getBuyItemDTO() {
+//		return DTO;
+//	}
 }
