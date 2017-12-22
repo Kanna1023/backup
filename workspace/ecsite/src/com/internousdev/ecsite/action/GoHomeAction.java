@@ -13,6 +13,9 @@ public class GoHomeAction extends ActionSupport implements SessionAware {
 		return SUCCESS;
 	}
 
+	public Map<String, Object> getSession() {
+		return this.session;
+	}
 
 	@Override
 	public void setSession(Map<String, Object> session) {

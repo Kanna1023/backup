@@ -13,8 +13,8 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
 			<item value="C:\Users\internousdev\Desktop\workspace\workspace-matsuo\backup"/>
-			<item value="C:\Users\internousdev\Desktop\workspace\workspace-matsuo\backup\workspace\WebProj5"/>
 			<item value="C:\Users\internousdev\Desktop\workspace\workspace-matsuo\backup\workspace\ecsite"/>
+			<item value="C:\Users\internousdev\Desktop\workspace\workspace-matsuo\backup\workspace\WebProj5"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>

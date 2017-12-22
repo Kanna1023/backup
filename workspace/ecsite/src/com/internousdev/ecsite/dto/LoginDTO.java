@@ -14,7 +14,7 @@ public class LoginDTO {
 		return loginId;
 	}
 
-	public void setLoginId(String loginId) {
+	public void setLoginI(String loginId) {
 		this.loginId = loginId;
 	}
 
@@ -22,7 +22,7 @@ public class LoginDTO {
 		return loginPassword;
 	}
 
-	public void setLoginPassword(String loginPassword) {
+	public void setLoginPasswor(String loginPassword) {
 		this.loginPassword = loginPassword;
 	}
 

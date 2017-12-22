@@ -26,7 +26,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	/**
 	 * ログインID
 	 */
-	private String loginUserId;
+	private String loginUserPassword;
 
 	/**
 	 * ログインパスワード
@@ -36,7 +36,8 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	/**
 	 * ログイン情報を格納
 	 */
-	public Map<String, Object> session;
+	//public Map<String,Object>session;　なら下のgetは不要
+	private Map<String, Object> session;
 
 	/**
 	 * ログイン情報取得DAO
@@ -46,7 +47,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 	/**
 	 * ログイン情報格納IDTO
 	 */
-	private LoginDTO loginDTO = new LoginDTO();
+	private LoginDTO loginDto = new LoginDTO();
 
 	/**
 	 * アイテム情報を取得
@@ -61,9 +62,9 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		String result = ERROR;
 
 		// ログイン実行
-		loginDTO = loginDAO.getLoginUserInfo(loginUserId, loginPassword);
+		loginDto = loginDAO.getLoginUserInfo(loginUserPassword, loginPassword);
 
-		session.put("loginUser", loginDTO);
+		session.put("loginUser", loginDto);
 
 		// ログイン情報を比較
 		if(((LoginDTO) session.get("loginUser")).getLoginFlg()) {
@@ -71,7 +72,7 @@ public class LoginAction extends ActionSupport implements SessionAware{
 
 			// アイテム情報を取得
 			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
-			session.put("login_user_id",	loginDTO.getLoginId());
+			session.put("login_user_id",	loginDto.getLoginI());
 			session.put("id", buyItemDTO.getId());
 			session.put("buyItem_name", buyItemDTO.getItemName());
 			session.put("buyItem_price", buyItemDTO.getItemPrice());
@@ -82,23 +83,28 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		return result;
 	}
 
-	public String getLoginUserId() {
-		return loginUserId;
+	public String getLoginUserPassword() {
+		return loginUserPassword;
 	}
 
-	public void setLoginUserId(String loginUserId) {
-		this.loginUserId = loginUserId;
+	public void setLoginUserId(String loginUserPassword) {
+		this.loginUserPassword = loginUserPassword;
 	}
 
 	public String getLoginPassword() {
 		return loginPassword;
 	}
 
-	public void setLoginPassword(String loginPassword) {
+	public void setLPass(String loginPassword) {
 		this.loginPassword = loginPassword;
 	}
 
-	@Override
+	
+	public Map<String, Object> getSession(){
+		return session;
+	}
+	
+	
 	public void setSession(Map<String, Object> session) {
 		this.session = session;
 	}
