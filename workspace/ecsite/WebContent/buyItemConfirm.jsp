@@ -88,11 +88,11 @@
 				</tr>
 				<tr>
 					<td>購入個数</td>
-					<td><s:property value="session.count" /><span>個</span></td>
+					<td><s:property value="session.countq" /><span>個</span></td>
 				</tr>
 				<tr>
 					<td>支払い方法</td>
-					<td><s:property value="session.pay" /></td>
+					<td><s:property value="session.payq" /></td>
 				</tr>
 				<tr>
 					<td>

@@ -9,9 +9,9 @@ import com.internousdev.ecsite.util.DBConnector;
 
 public class BuyItemDAO {
 
-	private DBConnector dbConnector = new DBConnector();
+	private DBConnector db = new DBConnector();
 
-	private Connection connection = dbConnector.getConnection();
+	private Connection con = db.getConnection();
 
 	private BuyItemDTO buyItemDTO = new BuyItemDTO();
 
@@ -25,13 +25,13 @@ public class BuyItemDAO {
 		String sql = "SELECT id, item_name, item_price FROM item_info_transaction";
 
 		try {
-			PreparedStatement preparedStatement = connection.prepareStatement(sql);
-			ResultSet resultSet = preparedStatement.executeQuery();
+			PreparedStatement ps = con.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
 
-			if(resultSet.next()) {
-				buyItemDTO.setId(resultSet.getInt("id"));
-				buyItemDTO.setItemName(resultSet.getString("item_name"));
-				buyItemDTO.setItemPrice(resultSet.getString("item_price"));
+			if(rs.next()) {
+				buyItemDTO.setIdd(rs.getInt("id"));
+				buyItemDTO.setItemName(rs.getString("item_name"));
+				buyItemDTO.setItemPrice(rs.getString("item_price"));
 			}
 
 		} catch(Exception e) {
@@ -41,7 +41,8 @@ public class BuyItemDAO {
 		return buyItemDTO;
 	}
 
-	public BuyItemDTO getBuyItemDTO() {
-		return buyItemDTO;
-	}
+//	public BuyItemDTO getBuyItemDTO() {
+//		return buyItemDTO;
+//	}
+	
 }

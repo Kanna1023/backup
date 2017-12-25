@@ -77,8 +77,8 @@
 		<div>
 			<h3>商品を購入する際にはログインをお願いします。</h3>
 			<s:form action="LoginAction">
-				<s:textfield name="loginUserId" label="ログインユーザーID"/>
-				<s:password name="loginPassword" label="ログインPASS"/>
+				<s:textfield name="id" label="ログインユーザーID"/>
+				<s:password name="password" label="ログインPASS"/>
 				<s:submit value="ログイン" />
 			</s:form>
 			<br/>

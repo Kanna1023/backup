@@ -26,9 +26,10 @@ public class BuyItemCompleteDAO {
 	 * @param total_count
 	 * @param pay
 	 * @throws SQLException
-	 */
-	public void buyItemeInfo(String item_transaction_id, String user_master_id, String total_price, String total_count, String pay) throws SQLException {
+	 * public void buyItemeInfo(String item_transaction_id, String user_master_id, String total_price, String total_count, String pay) throws SQLException {
 
+	 */
+	 public void buyItemeInfo(String item_transaction_id, String user_master_id, String total_price, String total_count, String pay) throws SQLException {
 		try {
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 			preparedStatement.setString(1, item_transaction_id);

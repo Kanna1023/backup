@@ -2,7 +2,7 @@ package com.internousdev.ecsite.dto;
 
 public class BuyItemDTO {
 
-	public int id;
+	public int idd;
 
 	public String itemName;
 
@@ -24,11 +24,11 @@ public class BuyItemDTO {
 		this.itemPrice = itemPrice;
 	}
 
-	public int getId() {
-		return id;
+	public int getIdd() {
+		return idd;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdd(int idd) {
+		this.idd = idd;
 	}
 }
