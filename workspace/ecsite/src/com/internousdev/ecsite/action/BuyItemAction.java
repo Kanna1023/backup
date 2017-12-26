@@ -11,6 +11,7 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 
 	/**
 	 * アイテム購入個数
+	 * buyItem.jspからやってきた。
 	 */
 	private int count;
 
@@ -31,8 +32,8 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 	 */
 	public String execute() {
 		String result = SUCCESS;
-		session.put("countq", count);
-		int intCount = Integer.parseInt(session.get("countq").toString());
+		session.put("countt", count);
+		int intCount = Integer.parseInt(session.get("countt").toString());
 		int intPrice = Integer.parseInt(session.get("buyItem_price").toString());
 
 		session.put("total_price", intCount * intPrice);
@@ -41,11 +42,11 @@ public class BuyItemAction extends ActionSupport implements SessionAware {
 		if(pay.equals("1")) {
 
 			payment = "現金払い";
-			session.put("payq", payment);
+			session.put("payy", payment);
 		} else {
 
 			payment = "クレジットカード";
-			session.put("payq", payment);
+			session.put("payy", payment);
 		}
 		return result;
 	}

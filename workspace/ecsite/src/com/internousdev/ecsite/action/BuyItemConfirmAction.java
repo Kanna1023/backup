@@ -12,7 +12,7 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware{
 
 	public Map<String,Object> session;
 
-	private BuyItemCompleteDAO buyItemCompleteDAO = new BuyItemCompleteDAO();
+	private BuyItemCompleteDAO dao = new BuyItemCompleteDAO();
 
 	/**
 	 * 商品購入情報登録メソッド
@@ -21,12 +21,12 @@ public class BuyItemConfirmAction extends ActionSupport implements SessionAware{
 	 */
 	public String execute() throws SQLException {
 
-		buyItemCompleteDAO.buyItemeInfo(
-				session.get("idoo").toString(),
+		dao.buyItemeInfo(
+				session.get("idItem").toString(),
 				session.get("login_user_id").toString(),
 				session.get("total_price").toString(),
-				session.get("countq").toString(),
-				session.get("payq").toString());
+				session.get("countt").toString(),
+				session.get("payy").toString());
 
 		String result = SUCCESS;
 		return result;

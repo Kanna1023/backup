@@ -20,7 +20,7 @@ public class HomeAction extends ActionSupport implements SessionAware {
 	 */
 	public String execute() {
 		String result = "login";
-		if (session.containsKey("id")) {
+		if (session.containsKey("idItem")) {
 			// アイテム情報を取得
 			BuyItemDAO buyItemDAO = new BuyItemDAO();
 			BuyItemDTO buyItemDTO = buyItemDAO.getBuyItemInfo();
@@ -38,11 +38,12 @@ public class HomeAction extends ActionSupport implements SessionAware {
 		this.session = session;
 	}
 
-	public void setsession(Map<String, Object> session) {
-		this.session = session;
-	}
-
-	public Map<String, Object> getsession() {
-		return this.session;
-	}
+// 以下は、不要。	
+//	public void setsession(Map<String, Object> session) {
+//		this.session = session;
+//	}
+//
+//	public Map<String, Object> getsession() {
+//		return this.session;
+//	}
 }

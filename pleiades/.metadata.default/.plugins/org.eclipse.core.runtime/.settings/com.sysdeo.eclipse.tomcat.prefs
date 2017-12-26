@@ -1,0 +1,7 @@
+tomcatDir=%ECLIPSE_HOME_PARENT%/tomcat/7
+eclipse.preferences.version=1
+fixTomcatHomeBug=fixed
+contextsDir=%ECLIPSE_HOME_PARENT%/tomcat/7/conf/Catalina/localhost
+tomcatVersion=tomcatV7
+computeSourcePath=true
+tomcatConfigFile=%ECLIPSE_HOME_PARENT%/tomcat/7/conf/server.xml
